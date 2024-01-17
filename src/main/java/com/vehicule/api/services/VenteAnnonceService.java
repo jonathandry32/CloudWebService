@@ -9,6 +9,7 @@ import com.vehicule.api.repository.AnnonceRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import java.util.Date;
+import java.util.List;
 import java.time.LocalDateTime;
 
 @Service
@@ -38,4 +39,25 @@ public class VenteAnnonceService {
         venteannonceRepository.save(ann);
         return ann;
     }
+
+    public List<Object[]> venteByMarque() {
+        return venteannonceRepository.venteByMarque();
+    }
+    
+    public List<Object[]> venteByBoite() {
+        return venteannonceRepository.venteByBoite();
+    }
+    
+    public List<Object[]> venteByCarburant() {
+        return venteannonceRepository.venteByCarburant();
+    }
+    
+    public List<Object[]> sommeCommission() {
+        return venteannonceRepository.sommeCommission();
+    }
+    
+    public List<Object[]> venteByCategorie(Long idCategorie) {
+        return venteannonceRepository.venteByCategorie(idCategorie);
+    }
+    
 }

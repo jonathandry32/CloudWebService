@@ -20,6 +20,8 @@ public class Annonce {
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name="id_carburant",referencedColumnName="id_carburant")
     private Carburant carburant;
+    private String boite;
+    private String contact;
     private LocalDateTime date;
     private double prix;
     private double commission;
@@ -41,6 +43,22 @@ public class Annonce {
 
     public void setDate(LocalDateTime date) {
         this.date = date;
+    }
+
+    public String getBoite() {
+        return boite;
+    }
+
+    public void setBoite(String boite) {
+        this.boite = boite;
+    }
+    
+    public String getContact() {
+        return contact;
+    }
+
+    public void setContact(String contact) {
+        this.contact = contact;
     }
 
     public String getDescription() {
