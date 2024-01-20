@@ -1,5 +1,7 @@
 package com.vehicule.api.auth;
 
+import com.vehicule.api.entity.User;
+import com.vehicule.api.repository.UserRepository;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.jsonwebtoken.Claims;
 import jakarta.servlet.FilterChain;
@@ -24,10 +26,12 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
     private final JwtUtil jwtUtil;
     private final ObjectMapper mapper;
+    private UserRepository userRepository;
 
-    public JwtAuthorizationFilter(JwtUtil jwtUtil, ObjectMapper mapper) {
+    public JwtAuthorizationFilter(JwtUtil jwtUtil, ObjectMapper mapper,UserRepository userRepository) {
         this.jwtUtil = jwtUtil;
         this.mapper = mapper;
+        this.userRepository = userRepository;
     }
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException, IOException, ServletException {
@@ -44,9 +48,11 @@ public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
             if(claims != null & jwtUtil.validateClaims(claims)){
                 String email = claims.getSubject();
+                User user = userRepository.findByEmail(email);
+                String password = user.getPassword();
                 System.out.println("email : "+email);
                 Authentication authentication =
-                        new UsernamePasswordAuthenticationToken(email,"test");
+                        new UsernamePasswordAuthenticationToken(email,password);
                 SecurityContextHolder.getContext().setAuthentication(authentication);
             }
 

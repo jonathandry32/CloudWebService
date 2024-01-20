@@ -2,6 +2,7 @@ package com.vehicule.api.controller;
 
 import com.vehicule.api.auth.JwtUtil;
 import com.vehicule.api.entity.User;
+import com.vehicule.api.dto.LoginDTO;
 import com.vehicule.api.repository.UserRepository;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -23,16 +24,19 @@ public class AuthController {
     }
 
    @PostMapping("/auth/login")
-    public String login(String mail, String password)  {
+    public LoginDTO login(String mail, String password) throws Exception {
         try {
             Authentication authentication =
                     authenticationManager.authenticate(new UsernamePasswordAuthenticationToken(mail, password));
             User user = userRepository.findByEmail(mail);
             String token = jwtUtil.createToken(user);
-            return token;
+            LoginDTO responseDTO = new LoginDTO();
+            responseDTO.setToken(token);
+            responseDTO.setUser(user);
+            return responseDTO;
 
         }catch (Exception e){
-            return e.getMessage();
+            throw new Exception(e.getMessage());
         }
     }
 
