@@ -59,4 +59,25 @@ public class VenteAnnonceController {
     public void deleteAll(){
         annonceRepository.deleteAll();
     }
+    
+    @GetMapping("/venteannonce/marques")
+    public List<Object[]> venteMarque() {
+        return venteannonceService.venteByMarque();
+    }
+    @GetMapping("/venteannonce/boites")
+    public List<Object[]> venteByBoite() {
+        return venteannonceService.venteByBoite();
+    }
+    @GetMapping("/venteannonce/carburants")
+    public List<Object[]> venteByCarburant() {
+        return venteannonceService.venteByCarburant();
+    }
+    @GetMapping("/venteannonce/categories")
+    public List<Object[]> venteByCategorie(Long idCategorie) {
+        return venteannonceService.venteByCategorie(idCategorie);
+    }
+    @GetMapping("/venteannonce/commission")
+    public List<Object[]> sommeCommission() {
+        return venteannonceService.sommeCommission();
+    }
 }

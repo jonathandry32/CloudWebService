@@ -1,6 +1,7 @@
 package com.vehicule.api.entity;
 
 import jakarta.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
@@ -38,4 +39,8 @@ public class Modele {
     public void setIdModele(Long idModel) {
         this.idModele = idModel;
     }
+    
+    @OneToMany(mappedBy = "modele")
+    private List<CategorieModele> categoriemodele;
+
 }

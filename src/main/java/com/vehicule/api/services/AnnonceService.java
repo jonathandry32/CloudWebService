@@ -23,12 +23,14 @@ public class AnnonceService {
         this.annonceRepository = annonceRepository;
     }
 
-    public Annonce saveAnnonce(String description,User proprietaire,Modele modele,Carburant carburant,double prix,double commission,double kilometrage,int etat,int status){
+    public Annonce saveAnnonce(String description,User proprietaire,Modele modele,Carburant carburant,String boite,String contact,double prix,double commission,double kilometrage,int etat,int status){
         Annonce annonce = new Annonce();
         annonce.setDescription(description);
         annonce.setProprietaire(proprietaire);
         annonce.setModele(modele);
         annonce.setCarburant(carburant);
+        annonce.setBoite(boite);
+        annonce.setContact(contact);
         annonce.setDate(LocalDateTime.now());
         annonce.setPrix(prix);
         annonce.setCommission(commission);

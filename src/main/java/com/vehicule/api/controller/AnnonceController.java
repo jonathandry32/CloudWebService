@@ -42,14 +42,14 @@ public class AnnonceController {
     }
 
     @PostMapping("/annonce")
-    public Annonce save(String description,Long idUser,Long idModele,Long idCarburant,double prix,double kilometrage){
+    public Annonce save(String description,Long idUser,Long idModele,Long idCarburant,String boite,String contact,double prix,double kilometrage){
         User proprietaire = userRepository.findById(idUser).get();
         Modele modele = modeleRepository.findById(idModele).get();
         Carburant carburant = carburantRepository.findById(idCarburant).get();
         double commission=0;
         int etat=0;
-        int status=0;
-        return annonceService.saveAnnonce(description,proprietaire,modele,carburant,prix,commission,kilometrage,etat,status);
+        int status=0;   
+        return annonceService.saveAnnonce(description,proprietaire,modele,carburant,boite,contact,prix,commission,kilometrage,etat,status);
     }
 
     @GetMapping("/auth/annonces/{id}")
