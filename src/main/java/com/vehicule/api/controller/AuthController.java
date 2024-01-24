@@ -61,7 +61,6 @@ public class AuthController {
 
         }catch (Exception e){
             throw new Exception(mail+" "+password);
-
         }
     }
 

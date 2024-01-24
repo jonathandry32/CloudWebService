@@ -77,6 +77,39 @@
 			"response": []
 		},
 		{
+			"name": "Sign 3",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/auth/sign?email=johary@gmail.com&nom=Johary&password=johary",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"sign"
+					],
+					"query": [
+						{
+							"key": "email",
+							"value": "johary@gmail.com"
+						},
+						{
+							"key": "nom",
+							"value": "Johary"
+						},
+						{
+							"key": "password",
+							"value": "johary"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "Login",
 			"request": {
 				"auth": {
@@ -182,7 +215,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -282,7 +315,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -320,7 +353,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -354,7 +387,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -480,7 +513,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -514,7 +547,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -552,7 +585,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -560,7 +593,7 @@
 				"method": "POST",
 				"header": [],
 				"url": {
-					"raw": "localhost:8080/annonce?description=Voiture puissant et economique, mode sport, vitesse manuel&idUser=2&idModele=1&idCarburant=1&prix=30000000&kilometrage=50000",
+					"raw": "localhost:8080/annonce?description=Voiture puissant et economique, mode sport, vitesse manuel&idUser=2&idModele=1&idCarburant=1&prix=30000000&kilometrage=50000&boite=manuel",
 					"host": [
 						"localhost"
 					],
@@ -592,6 +625,10 @@
 						{
 							"key": "kilometrage",
 							"value": "50000"
+						},
+						{
+							"key": "boite",
+							"value": "manuel"
 						}
 					]
 				}
@@ -690,6 +727,16 @@
 		{
 			"name": "Annonce en cours",
 			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
+							"type": "string"
+						}
+					]
+				},
 				"method": "GET",
 				"header": [],
 				"url": {
@@ -715,7 +762,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -783,7 +830,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -812,7 +859,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -850,7 +897,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -880,7 +927,7 @@
 					"bearer": [
 						{
 							"key": "token",
-							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ0ZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IlRlc3QiLCJpZCI6MiwiZXhwIjoxOTIxMTU4NDA2fQ.rb1qE7ZPlu69Ddfw7R3kA3b0Tz7jbyucnB6-HokBCwM",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
 							"type": "string"
 						}
 					]
@@ -905,6 +952,288 @@
 						{
 							"key": "idUser",
 							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nombre vente par marque",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/venteannonce/marques",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venteannonce",
+						"marques"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nombre vente par carburant",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/venteannonce/carburants",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venteannonce",
+						"carburants"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Nombre vente par boite",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/venteannonce/boites",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venteannonce",
+						"boites"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Vente par categorie",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/venteannonce/categories?idCategorie=1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venteannonce",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "idCategorie",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Somme commission",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/venteannonce/commission",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"venteannonce",
+						"commission"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Commission values",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/commissions/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"commissions",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Envoyer messages",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/message/2/3?messages=ahoana",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"message",
+						"2",
+						"3"
+					],
+					"query": [
+						{
+							"key": "messages",
+							"value": "ahoana"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Lire message",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJUZXN0QHRlc3QudGVzdCIsImZpcnN0TmFtZSI6IkJvdCIsImlkIjoxLCJleHAiOjE5MjEzMjcyMTl9.fA6sS43Jz5Q4e9DJcaDJv36r0LHVHTzQ8M-QBhNPQzs",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/messages?me=2&other=3",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"messages"
+					],
+					"query": [
+						{
+							"key": "me",
+							"value": "2"
+						},
+						{
+							"key": "other",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload image",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8080/photoannonce?idAnnonce=1&file",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"photoannonce"
+					],
+					"query": [
+						{
+							"key": "idAnnonce",
+							"value": "1"
+						},
+						{
+							"key": "file",
+							"value": null
 						}
 					]
 				}

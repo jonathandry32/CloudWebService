@@ -16,5 +16,6 @@ public interface AnnonceFavorisRepository extends JpaRepository<AnnonceFavoris, 
     @Query("DELETE FROM AnnonceFavoris af WHERE af.annonce.idAnnonce = :idAnnonce AND af.user.id = :users")
     void supprimerFavori(Long idAnnonce, Long users);
 
-
+    @Query("SELECT af FROM AnnonceFavoris af WHERE af.user.id = :userId AND af.annonce.idAnnonce = :annonceId")
+    AnnonceFavoris findByUserIdAndAnnonceId(Long userId,Long annonceId);
 }

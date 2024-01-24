@@ -41,6 +41,11 @@ public class AnnonceFavorisService {
     public List<AnnonceFavoris> getFavoriteAnnoncesByUserId(Long userId) {
         return annonceFavorisRepository.findByUser_Id(userId);
     }
+    
+    public boolean estAnnonceFavoris(Long idUser, Long idAnnonce) {
+        AnnonceFavoris annonceFavoris = annonceFavorisRepository.findByUserIdAndAnnonceId(idUser, idAnnonce);
+        return annonceFavoris != null;
+    }
 
     public void supprimerFavori(Long idAnnonce, Long idUser) {
         annonceFavorisRepository.supprimerFavori(idAnnonce, idUser);
