@@ -8,8 +8,9 @@ import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.MediaType;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -17,55 +18,48 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.filter.OncePerRequestFilter;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Map;
 
 @Component
 public class JwtAuthorizationFilter extends OncePerRequestFilter {
 
     private final JwtUtil jwtUtil;
     private final ObjectMapper mapper;
+    private final UserDetailsService userDetailsService;
     private UserRepository userRepository;
 
-    public JwtAuthorizationFilter(JwtUtil jwtUtil, ObjectMapper mapper,UserRepository userRepository) {
+    public JwtAuthorizationFilter(JwtUtil jwtUtil, ObjectMapper mapper, UserDetailsService userDetailsService, UserRepository userRepository) {
         this.jwtUtil = jwtUtil;
         this.mapper = mapper;
+        this.userDetailsService = userDetailsService;
         this.userRepository = userRepository;
     }
-    @Override
-    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException, IOException, ServletException {
-        Map<String, Object> errorDetails = new HashMap<>();
 
+    @Override
+    protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
         try {
             String accessToken = jwtUtil.resolveToken(request);
-            if (accessToken == null ) {
+            if (accessToken == null) {
                 filterChain.doFilter(request, response);
                 return;
             }
-            System.out.println("token : "+accessToken);
+
             Claims claims = jwtUtil.resolveClaims(request);
 
-            if(claims != null & jwtUtil.validateClaims(claims)){
+            if (claims != null && jwtUtil.validateClaims(claims)) {
                 String email = claims.getSubject();
-                User user = userRepository.findByEmail(email);
-                String password = user.getPassword();
-                System.out.println("email : "+email);
-                Authentication authentication =
-                        new UsernamePasswordAuthenticationToken(email,password);
-                SecurityContextHolder.getContext().setAuthentication(authentication);
+                UserDetails userDetails = userDetailsService.loadUserByUsername(email);
+
+                if (userDetails != null) {
+                    Authentication authentication = new UsernamePasswordAuthenticationToken(userDetails, null, userDetails.getAuthorities());
+                    SecurityContextHolder.getContext().setAuthentication(authentication);
+                }
             }
 
-        }catch (Exception e){
-            System.out.println(e.getMessage());
-            //errorDetails.put("message", "Authentication Error");
-            //errorDetails.put("details",e.getMessage());
-            //response.setStatus(HttpStatus.FORBIDDEN.value());
-            //response.setContentType(MediaType.APPLICATION_JSON_VALUE);
-
-            //mapper.writeValue(response.getWriter(), errorDetails);
-
+        } catch (Exception e) {
+            System.out.println("Authentication error: " + e.getMessage());
         }
+
         filterChain.doFilter(request, response);
     }
+
 }
