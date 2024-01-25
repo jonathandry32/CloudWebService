@@ -35,10 +35,16 @@ public class PhotoAnnonceController {
         return photoannonceService.getPhotosByAnnonceId(idAnnonce);
     }
 
-    @PostMapping("/photoannonce")
-    public PhotoAnnonce save(Long idAnnonce, MultipartFile file) throws IOException {
+    @PostMapping("/photoannonces")
+    public PhotoAnnonce saves(Long idAnnonce, MultipartFile file) throws IOException {
         Annonce annonce = annonceRepository.findById(idAnnonce).get();
         String fileUrl = photoannonceService.uploadPhoto(file);
         return photoannonceService.savePhotoAnnonce(annonce, fileUrl);
+    }
+
+    @PostMapping("/photoannonce")
+    public PhotoAnnonce save(Long idAnnonce, String filelink) throws IOException {
+        Annonce annonce = annonceRepository.findById(idAnnonce).get();
+        return photoannonceService.savePhotoAnnonce(annonce, filelink);
     }
 }

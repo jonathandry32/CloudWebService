@@ -18,12 +18,13 @@ public class UserService {
         this.passwordEncoder = passwordEncoder;
     }
 
-    public User saveUser(String email,String nom,String password){
+    public User saveUser(String email,String nom,String password,String pdp){
         User user = new User();
         user.setEmail(email);
         user.setNom(nom);
         String encryptedPassword = passwordEncoder.encode(password);
         user.setPassword(encryptedPassword);
+        user.setPhotoProfil(pdp);
         user = userRepository.save(user);
         return user;
     }

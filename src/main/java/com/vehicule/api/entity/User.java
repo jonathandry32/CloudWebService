@@ -52,4 +52,13 @@ public class User {
     public Long getId() {
         return id;
     }
+    public String getPhotoProfil() {
+        return photoprofil;
+    }
+
+    public void setPhotoProfil(String pdp) {
+        this.photoprofil = pdp;
+    }
+
+    private String photoprofil;
 }
