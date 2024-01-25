@@ -25,7 +25,7 @@ public class UserController {
     }
 
     @PostMapping("/auth/sign")
-    public User sign(String email, String nom, String password)  {
-        return userService.saveUser(email,nom,password);
+    public User sign(String email, String nom, String password,String pdp)  {
+        return userService.saveUser(email,nom,password,pdp);
     }
 }
