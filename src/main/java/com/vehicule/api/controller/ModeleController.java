@@ -65,5 +65,10 @@ public class ModeleController {
             carburantmodeleService.saveCarburantModele(result,carburant);            
         }
     }
-    
+
+    @GetMapping("/modeles/{idMarque}")
+    public List<Modele> findAll(@PathVariable("idMarque") int idMarque){
+        return modeleRepository.findAllByMarqueIdMarque(idMarque);
+    }
+
 }

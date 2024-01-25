@@ -19,6 +19,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Map;
 import java.util.Optional;
 
 @RestController
@@ -163,5 +164,25 @@ public class AnnonceController {
         int etat = 0;
         int status = 0;
         return annonceService.getAnnouncementsByEtatAndStatus(etat, status);
+    }
+
+    @PostMapping("/annonceSaveApp")
+    public Annonce save(@RequestBody Map<String, Object> requestBody){
+        Long idUser = (Long) requestBody.get("idUser");
+        Long idModele = (Long) requestBody.get("idModele");
+        Long idCarburant = (Long) requestBody.get("idCarburant");
+        String description = (String) requestBody.get("description");
+        String boite = (String) requestBody.get("boite");
+        String contact = (String) requestBody.get("contact");
+        double prix = (double) requestBody.get("prix");
+        double kilometrage = (double) requestBody.get("kilometrage");
+
+        User proprietaire = userRepository.findById(idUser).get();
+        Modele modele = modeleRepository.findById(idModele).get();
+        Carburant carburant = carburantRepository.findById(idCarburant).get();
+        double commission=0;
+        int etat=0;
+        int status=0;
+        return annonceService.saveAnnonce(description,proprietaire,modele,carburant,boite,contact,prix,commission,kilometrage,etat,status);
     }
 }
