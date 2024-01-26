@@ -60,7 +60,7 @@ public class SecurityConfig {
         @Override
         public void addCorsMappings(CorsRegistry registry) {
             registry.addMapping("/**")
-                    .allowedOrigins("https://cloudwebservice-production-7ad7.up.railway.app/auth/login")
+                    .allowedOrigins("https://cloudwebservice-production-7ad7.up.railway.app")
                     .allowedMethods("GET", "POST", "PUT", "DELETE")
                     .allowedHeaders("Authorization", "Content-Type")
                     .allowCredentials(true)
