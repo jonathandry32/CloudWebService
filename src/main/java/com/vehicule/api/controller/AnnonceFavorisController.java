@@ -8,6 +8,7 @@ import com.vehicule.api.entity.Annonce;
 import com.vehicule.api.repository.AnnonceFavorisRepository;
 import com.vehicule.api.repository.UserRepository;
 import com.vehicule.api.repository.AnnonceRepository;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import com.vehicule.api.services.AnnonceFavorisService;
 import com.vehicule.api.services.PhotoAnnonceService;
 import org.springframework.beans.factory.annotation.Autowired;

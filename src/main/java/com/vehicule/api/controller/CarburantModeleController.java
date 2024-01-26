@@ -8,6 +8,7 @@ import com.vehicule.api.repository.ModeleRepository;
 import com.vehicule.api.repository.CarburantRepository;
 import com.vehicule.api.repository.CarburantModeleRepository;
 import com.vehicule.api.services.CarburantModeleService;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;

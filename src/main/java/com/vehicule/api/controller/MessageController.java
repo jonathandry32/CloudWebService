@@ -7,6 +7,7 @@ import com.vehicule.api.repository.UserRepository;
 import com.vehicule.api.services.MessageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 import org.bson.types.ObjectId;
 import java.util.Optional;

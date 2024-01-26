@@ -6,6 +6,7 @@ import com.vehicule.api.repository.CarburantRepository;
 import com.vehicule.api.services.CarburantService;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 
 @RestController
