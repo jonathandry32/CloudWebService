@@ -9,7 +9,6 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins="*")
 public class CommissionController {
     private final CommissionService commissionService;
     private final CommissionRepository commissionRepository;
