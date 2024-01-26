@@ -7,14 +7,12 @@ import com.vehicule.api.repository.VenteAnnonceRepository;
 import com.vehicule.api.repository.UserRepository;
 import com.vehicule.api.repository.AnnonceRepository;
 import com.vehicule.api.services.VenteAnnonceService;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "*")
 public class VenteAnnonceController {
     private final VenteAnnonceService venteannonceService;
     private final VenteAnnonceRepository venteannonceRepository;

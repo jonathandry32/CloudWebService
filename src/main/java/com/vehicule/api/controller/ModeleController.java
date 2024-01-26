@@ -14,13 +14,11 @@ import com.vehicule.api.services.CarburantModeleService;
 import com.vehicule.api.services.CategorieModeleService;
 import com.vehicule.api.services.ModeleService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "*")
 public class ModeleController {
     private final ModeleService modeleService;
     private final ModeleRepository modeleRepository;

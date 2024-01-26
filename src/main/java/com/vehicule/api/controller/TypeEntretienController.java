@@ -5,12 +5,10 @@ import com.vehicule.api.repository.TypeEntretienRepository;
 import com.vehicule.api.services.TypeEntretienService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "*")
 public class TypeEntretienController {
     private final TypeEntretienService typeEntretienService;
     private final TypeEntretienRepository typeEntretienRepository;

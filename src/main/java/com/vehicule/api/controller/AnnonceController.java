@@ -16,7 +16,6 @@ import com.vehicule.api.services.PhotoAnnonceService;
 import com.vehicule.api.services.VenteAnnonceService;
 import com.vehicule.api.services.AnnonceFavorisService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.ArrayList;
@@ -24,7 +23,6 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "*")
 public class AnnonceController {
     private final AnnonceService annonceService;
     private final AnnonceRepository annonceRepository;

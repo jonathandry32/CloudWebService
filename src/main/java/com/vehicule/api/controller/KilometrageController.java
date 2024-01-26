@@ -7,12 +7,10 @@ import com.vehicule.api.repository.VehiculeRepository;
 import com.vehicule.api.services.KilometrageService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import java.util.List;
 import java.util.Optional;
 
 @RestController
-@CrossOrigin(origins = "*")
 public class KilometrageController {
     private final KilometrageService kilometrageService;
     private final KilometrageRepository kilometrageRepository;

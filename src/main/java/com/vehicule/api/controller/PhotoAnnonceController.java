@@ -8,13 +8,11 @@ import com.vehicule.api.services.PhotoAnnonceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.multipart.MultipartFile;
 import java.util.Optional;
 import java.io.IOException;
 
 @RestController
-@CrossOrigin(origins = "*")
 public class PhotoAnnonceController {
     private final PhotoAnnonceService photoannonceService;
     private final PhotoAnnonceRepository photoannonceRepository;
