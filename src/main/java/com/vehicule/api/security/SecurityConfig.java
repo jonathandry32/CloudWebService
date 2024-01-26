@@ -65,5 +65,4 @@ public class SecurityConfig {
                     .allowedHeaders("Authorization", "Content-Type");
         }
     }
-
 }

@@ -14,6 +14,7 @@ import java.util.List;
 import java.util.Collection;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class CategorieController {
     private final CategorieService categorieService;
     private CategorieRepository categorieRepository = null;

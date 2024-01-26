@@ -19,6 +19,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class ModeleController {
     private final ModeleService modeleService;
     private final ModeleRepository modeleRepository;

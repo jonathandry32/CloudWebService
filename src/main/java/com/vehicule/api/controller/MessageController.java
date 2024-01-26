@@ -12,6 +12,7 @@ import org.bson.types.ObjectId;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class MessageController {
     private final MessageService messageService;
     private final MessageRepository messageRepository;

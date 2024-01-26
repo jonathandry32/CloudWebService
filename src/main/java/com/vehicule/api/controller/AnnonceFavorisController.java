@@ -17,6 +17,7 @@ import java.util.ArrayList;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class AnnonceFavorisController {
     private final AnnonceFavorisService annonceFavorisService;
     private final PhotoAnnonceService photoannonceService;

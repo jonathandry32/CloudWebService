@@ -14,6 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class UserController {
     private final UserRepository userRepository;
     private final UserService userService;

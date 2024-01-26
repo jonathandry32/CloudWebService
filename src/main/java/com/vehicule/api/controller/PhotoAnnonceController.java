@@ -13,6 +13,7 @@ import java.util.Optional;
 import java.io.IOException;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class PhotoAnnonceController {
     private final PhotoAnnonceService photoannonceService;
     private final PhotoAnnonceRepository photoannonceRepository;

@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class CarburantModeleController {
 
     private final CarburantModeleService carburantmodeleService;

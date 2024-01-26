@@ -23,6 +23,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class AnnonceController {
     private final AnnonceService annonceService;
     private final AnnonceRepository annonceRepository;

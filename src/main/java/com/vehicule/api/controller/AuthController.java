@@ -15,8 +15,8 @@ import org.springframework.security.authentication.UsernamePasswordAuthenticatio
 
 import java.util.Map;
 
-@CrossOrigin(origins = "*")
 @RestController
+@CrossOrigin(origins = "*")
 public class AuthController {
     private final AuthenticationManager authenticationManager;
     private UserRepository userRepository;

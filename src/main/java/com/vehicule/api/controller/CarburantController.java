@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class CarburantController {
     private final CarburantService carburantService;
     private final CarburantRepository carburantRepository;

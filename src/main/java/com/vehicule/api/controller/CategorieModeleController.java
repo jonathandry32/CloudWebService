@@ -18,6 +18,7 @@ import java.util.Collection;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class CategorieModeleController {
 
     private final CategorieModeleService categoriemodeleService;

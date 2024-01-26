@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins = "*")
 public class VehiculeController {
     private final VehiculeService vehiculeService;
     private final VehiculeRepository vehiculeRepository;
