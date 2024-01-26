@@ -63,7 +63,8 @@ public class SecurityConfig {
                     .allowedOrigins("http://localhost:3000")
                     .allowedMethods("GET", "POST", "PUT", "DELETE")
                     .allowedHeaders("Authorization", "Content-Type")
-                    .allowCredentials(true);
+                    .allowCredentials(true)
+                    .maxAge(3600);
         }
     }
 
