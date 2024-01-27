@@ -66,4 +66,9 @@ public class ModeleController {
         }
     }
     
+    @GetMapping("/modeles/{idMarque}")
+    public List<Modele> findAllByIdMarque(@PathVariable int idMarque){
+        return modeleRepository.findAllByMarqueIdMarque(idMarque);
+    }
+    
 }
